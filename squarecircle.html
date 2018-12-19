@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Test</title>
+    </head>
+    
+    <body onload="draw()">
+        <canvas id="sketch" width="300" height="300"></canvas>
+        <script language="javascript">
+            var sketch = document.getElementById('sketch');
+            var context = sketch.getContext("2d");
+
+            function draw() {
+                drawASquare();
+                drawACircle();
+            }
+
+            function drawASquare() {
+                context.fillStyle = 'red';
+                context.fillRect(10, 10, 110, 110);
+            }
+            function drawACircle() {
+                context.fillStyle = 'blue';
+                context.beginPath();
+                context.arc(230, 60, 55, 0, 2 * Math.PI);
+                context.stroke();
+                context.fill();
+            }
+        </script>
+    </body>
+</html>
+

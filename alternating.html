@@ -1,0 +1,41 @@
+</script>
+
+    </body>
+</html>
+                                                                 
+              <html>
+    <head>
+        <title>Test</title>
+    </head>
+
+    <body onload="draw()">
+        <canvas id="sketch" width="500" height="500"></canvas>
+        <script language="javascript">
+           
+                var sketch = document.getElementById('sketch');
+                var context = sketch.getContext("2d");
+                
+                function draw() {
+                for (var i = 0; i < 10; i++) {
+                if(i % 2 === 0){
+                drawACircle((i*40) + 15)
+                }
+                else{  
+                drawASquare(i*40)
+              }     
+            }
+        }
+        function drawACircle(xCoord) {
+                context.fillStyle = "#0000FF"
+                context.arc(xCoord, 30, 15, 0, 2* Math.PI);
+                context.fill();
+            }
+         function drawASquare(xCoord) {
+        context.fillStyle = "#00FF00"
+       context.fillRect(xCoord, 15, 30, 30);
+         }
+         
+        </script>
+    </body>
+</html>         
+

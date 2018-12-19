@@ -1,0 +1,16 @@
+  <html>
+    <head>
+        <title>Test</title>
+    </head>
+    
+    <body onload="drawASquare()">
+        <canvas id="sketch" width="300" height="300"></canvas>
+        <script language="javascript">
+            function drawASquare() {
+                var sketch = document.getElementById('sketch');
+                var context = sketch.getContext("2d");
+                context.fillRect(10, 10, 150, 150);
+            }
+        </script>
+    </body>
+</html>      

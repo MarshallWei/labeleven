@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Test</title>
+    </head>
+    <style>
+
+    </style>
+   </head>
+
+    <body onload="draw( )">
+       <canvas id="sketch" width="300" height="300">
+    </canvas>
+  </body>
+
+  <script>
+    function draw(){
+        let radius;
+        let radiusInt;
+        let color;
+        let colorString;
+        radius = prompt("Enter a radius");
+        radiusInt = parseInt(radius);
+
+        color = prompt("Enter a color");
+           if(color === "red"){
+            colorString = "#ff0000";
+            }
+           else if(color === "blue"){
+            colorString = "#0000ff";
+            }
+        else if(color === "green"){
+          colorString = "#0080000";
+          }
+            else {
+              colorString = "#000000";
+          }
+            var sketch = document.getElementById('sketch');
+            var context = sketch.getContext("2d");
+                context.beginPath();
+                context.arc(150, 150, radiusInt, 0, 2 * Math.PI);
+                context.stroke();
+                context.fillStyle = colorString;
+                context.fill();
+            }
+        </script>
+    </body>
+</html>
+
